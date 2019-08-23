@@ -21,11 +21,13 @@ Or install it yourself as:
 ## Example
 
   ```ruby
+    
     # Initiate Wavecell SMS configuration by putting sub account and api key
     WavecellSms.configure do |config|
       config.api_key = 'api_key'
       config.sub_account = 'sub_account'
     end
+    
     # Compose your message to be sent to users
     @config = WavecellSms::SendSms.new(
       source: 'Name of Source e.g ACME Inc.',
@@ -33,8 +35,10 @@ Or install it yourself as:
       text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       encoding: 'AUTO'
     )
+    
     # Call .send to send the SMS
     @config.send
+    
   ```
 
 ## Development
