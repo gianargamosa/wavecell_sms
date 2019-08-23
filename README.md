@@ -1,4 +1,4 @@
-# Wavecell Bulk SMS API Wrapper
+# Wavecell API Wrapper
 
 WavecellSms is a ruby gem wrapper for the wavecell platfrom for sending bulk sms.
 
