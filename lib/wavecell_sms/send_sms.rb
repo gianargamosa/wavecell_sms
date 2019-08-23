@@ -4,7 +4,7 @@ module WavecellSms
   class SendSms
     include HTTParty
     attr_accessor :source, :destination, :text, :encoding
-    # URL = 'https://api.wavecell.com/sms/v1/'
+
     # Initialize SMS parameters to send message to api
     def initialize(options = {})
       @source = options[:source]
@@ -12,6 +12,7 @@ module WavecellSms
       @text = options[:text]
       @encoding = options[:encoding]
     end
+    
     # Call this to generate url for the api calls
     def send
       generate_url

@@ -4,7 +4,7 @@ require "wavecell_sms/send_sms"
 
 module WavecellSms
   class Error < StandardError; end
-  # Your code goes here...
+  
   class << self
     attr_accessor :configuration
   end
