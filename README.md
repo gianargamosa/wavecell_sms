@@ -1,8 +1,6 @@
 # WavecellSms
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wavecell_sms`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+WavecellSms is a ruby gem wrapper for the wavecell platfrom for sending bulk sms.
 
 ## Installation
 
@@ -20,9 +18,24 @@ Or install it yourself as:
 
     $ gem install wavecell_sms
 
-## Usage
+## Example
 
-TODO: Write usage instructions here
+  ```ruby
+    # Initiate Wavecell SMS configuration by putting sub account and api key
+    WavecellSms.configure do |config|
+      config.api_key = 'api_key'
+      config.sub_account = 'sub_account'
+    end
+    # Compose your message to be sent to users
+    @config = WavecellSms::SendSms.new(
+      source: 'Name of Source e.g ACME Inc.',
+      destination: 'Mobile Number',
+      text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      encoding: 'AUTO'
+    )
+    # Call .send to send the SMS
+    @config.send
+  ```
 
 ## Development
 

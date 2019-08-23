@@ -1,5 +1,8 @@
+require 'httparty'
+
 module WavecellSms
   class SendSms
+    include HTTParty
     attr_accessor :source, :destination, :text, :encoding
     # URL = 'https://api.wavecell.com/sms/v1/'
     # Initialize SMS parameters to send message to api
@@ -28,6 +31,12 @@ module WavecellSms
         }
         query_string = parameters.to_a.map { |x| "#{x[0]}=#{x[1]}" }.join("&")
         url = "https://api.wavecell.com/sms/v1/#{sub_account}/single" + "?#{query_string}"
+        HTTParty.post(url.to_str, 
+        :body => parameters.to_json,
+        :headers => {
+          "Content-Type" => "application/json",
+          "Authorization" => "Bearer #{api_key}"
+        })
       end
 
   end
