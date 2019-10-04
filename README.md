@@ -1,6 +1,6 @@
 # Wavecell API Wrapper
 
-WavecellSms is a ruby gem wrapper for the wavecell platfrom for sending bulk sms.
+WavecellSMS is a ruby gem wrapper for the wavecell platfrom for sending bulk sms.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Example
 
   ```ruby
-    
+    initializer.rb
     # Initiate Wavecell SMS configuration by putting sub account and api key
     WavecellSms.configure do |config|
       config.api_key = 'api_key'
@@ -49,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/wavecell_sms. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/gianargamosa/wavecell_sms. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
