@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["argamosa.gian@gmail.com"]
 
   spec.summary       = "API integration for processing bulk SMS with wavecell."
-  spec.description   = "Process your payment through Wavecell API"
+  spec.description   = "Process your SMS notifications using Wavecell API"
   spec.homepage      = "https://github.com/gianargamosa/wavecell_sms"
   spec.license       = "MIT"
 
